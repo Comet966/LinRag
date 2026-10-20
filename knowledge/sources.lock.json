@@ -1,0 +1,9 @@
+{
+  "linux-command": {
+    "repo": "https://github.com/jaywcjlove/linux-command",
+    "ref": "master",
+    "license": "MIT",
+    "author": "jaywcjlove/linux-command contributors",
+    "revision": "cd17682d612e6fdfaff29261c11ffbc3f951f41d"
+  }
+}

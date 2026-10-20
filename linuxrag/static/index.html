@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LinuxRag · Linux 命令搜索</title>
+<link rel="stylesheet" href="/static/style.css?v=cards-2">
+<script src="/static/app.js?v=cards-2" defer></script>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+<a class="brand" href="/">Linux<span>Rag</span></a>
+<p class="description">Linux 命令文档搜索。<br>输入命令，或描述你想做的事。</p>
+<nav aria-label="相关链接"><a href="/docs">API</a></nav>
+<div class="library"><span class="label">知识库</span><p id="health">正在连接…</p></div>
+<div class="shortcuts"><span class="label">快捷键</span><p><kbd>Enter</kbd> 搜索</p><p><kbd>/</kbd> 聚焦搜索框</p><p><kbd>⌘ / Ctrl</kbd> <kbd>K</kbd> 修改搜索</p></div>
+<footer><a href="https://github.com/jaywcjlove/linux-command" target="_blank" rel="noopener noreferrer">linux-command · MIT</a></footer>
+</aside>
+<main>
+<section class="search-panel" aria-label="命令搜索">
+<form id="query-form" role="search">
+<label for="query">搜索</label>
+<div class="search-field"><span class="prompt" aria-hidden="true">&gt;</span><input id="query" name="query" type="search" maxlength="2000" required autofocus autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" placeholder="grep -r，或查找占用端口的进程…" aria-describedby="search-hint"><button id="submit" type="submit" aria-label="搜索文档">搜索 <span aria-hidden="true">↵</span></button></div>
+<p id="search-hint">输入后按回车查询</p>
+</form>
+</section>
+<div id="notice" role="status" aria-live="polite"></div>
+<section id="welcome"><h1>试试这些搜索</h1><div class="suggestions"><button type="button" data-query="tar">tar</button><button type="button" data-query="grep -r">grep -r</button><button type="button" data-query="如何查找占用 8080 端口的进程？">端口占用</button><button type="button" data-query="如何查看磁盘空间使用情况？">磁盘空间</button></div><p>命令卡片由开源文档整理，支持追溯原文和复制示例。</p></section>
+<section id="response" hidden aria-label="搜索结果"><div class="section-heading"><h2>结果 <span id="evidence-count"></span></h2><span id="mode"></span></div><p id="empty-results" hidden>没有找到相关文档，请尝试命令名或更具体的描述。</p><div id="evidence"></div></section>
+</main>
+</div>
+</body></html>

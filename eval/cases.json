@@ -1,0 +1,252 @@
+[
+  {
+    "category": "exact",
+    "query": "ls",
+    "expected": [
+      "ls"
+    ]
+  },
+  {
+    "category": "exact",
+    "query": "grep",
+    "expected": [
+      "grep"
+    ]
+  },
+  {
+    "category": "exact",
+    "query": "tar",
+    "expected": [
+      "tar"
+    ]
+  },
+  {
+    "category": "exact",
+    "query": "chmod",
+    "expected": [
+      "chmod"
+    ]
+  },
+  {
+    "category": "exact",
+    "query": "systemctl",
+    "expected": [
+      "systemctl"
+    ]
+  },
+  {
+    "category": "option",
+    "query": "grep -r 如何递归搜索文件内容",
+    "expected": [
+      "grep"
+    ]
+  },
+  {
+    "category": "option",
+    "query": "ls -a 显示隐藏文件",
+    "expected": [
+      "ls"
+    ]
+  },
+  {
+    "category": "option",
+    "query": "df -h 是什么意思",
+    "expected": [
+      "df"
+    ]
+  },
+  {
+    "category": "option",
+    "query": "tar -xzf 解压文件",
+    "expected": [
+      "tar"
+    ]
+  },
+  {
+    "category": "option",
+    "query": "find -name 按名称查找文件",
+    "expected": [
+      "find"
+    ]
+  },
+  {
+    "category": "task",
+    "query": "如何查看磁盘空间使用情况",
+    "expected": [
+      "df",
+      "du"
+    ]
+  },
+  {
+    "category": "task",
+    "query": "如何查看内存使用情况",
+    "expected": [
+      "free"
+    ]
+  },
+  {
+    "category": "task",
+    "query": "如何查找占用 8080 端口的进程",
+    "expected": [
+      "lsof",
+      "ss",
+      "netstat"
+    ]
+  },
+  {
+    "category": "task",
+    "query": "如何实时查看日志文件的末尾内容",
+    "expected": [
+      "tail"
+    ]
+  },
+  {
+    "category": "task",
+    "query": "如何查看正在运行的进程",
+    "expected": [
+      "ps",
+      "top"
+    ]
+  },
+  {
+    "category": "task",
+    "query": "如何修改文件权限",
+    "expected": [
+      "chmod"
+    ]
+  },
+  {
+    "category": "task",
+    "query": "如何修改文件所有者",
+    "expected": [
+      "chown"
+    ]
+  },
+  {
+    "category": "task",
+    "query": "如何创建目录",
+    "expected": [
+      "mkdir"
+    ]
+  },
+  {
+    "category": "task",
+    "query": "如何复制文件和目录",
+    "expected": [
+      "cp"
+    ]
+  },
+  {
+    "category": "task",
+    "query": "如何移动文件或重命名文件",
+    "expected": [
+      "mv"
+    ]
+  },
+  {
+    "category": "task",
+    "query": "如何统计文件的行数",
+    "expected": [
+      "wc"
+    ]
+  },
+  {
+    "category": "task",
+    "query": "如何查看当前工作目录",
+    "expected": [
+      "pwd"
+    ]
+  },
+  {
+    "category": "task",
+    "query": "如何远程连接服务器",
+    "expected": [
+      "ssh"
+    ]
+  },
+  {
+    "category": "task",
+    "query": "如何下载网络上的文件",
+    "expected": [
+      "wget",
+      "curl"
+    ]
+  },
+  {
+    "category": "task",
+    "query": "如何查看网络接口的 IP 地址",
+    "expected": [
+      "ip",
+      "ifconfig"
+    ]
+  },
+  {
+    "category": "task",
+    "query": "如何为文件创建符号链接",
+    "expected": [
+      "ln"
+    ]
+  },
+  {
+    "category": "task",
+    "query": "如何比较两个文本文件的差异",
+    "expected": [
+      "diff"
+    ]
+  },
+  {
+    "category": "task",
+    "query": "如何对文本行排序并去重",
+    "expected": [
+      "sort",
+      "uniq"
+    ]
+  },
+  {
+    "category": "combination",
+    "query": "find 查找日志文件后用 grep 搜索错误",
+    "expected": [
+      "find",
+      "grep"
+    ]
+  },
+  {
+    "category": "combination",
+    "query": "ps 配合 kill 终止指定进程",
+    "expected": [
+      "ps",
+      "kill"
+    ]
+  },
+  {
+    "category": "combination",
+    "query": "du 统计目录大小并用 sort 排序",
+    "expected": [
+      "du",
+      "sort"
+    ]
+  },
+  {
+    "category": "combination",
+    "query": "tar 压缩目录并用 scp 复制到远程服务器",
+    "expected": [
+      "tar",
+      "scp"
+    ]
+  },
+  {
+    "category": "absent",
+    "query": "不存在的命令 xyznotarealcommand987",
+    "expected": []
+  },
+  {
+    "category": "absent",
+    "query": "解释 frobnicate --teleport-quantum 的参数",
+    "expected": []
+  },
+  {
+    "category": "absent",
+    "query": "今天上海的天气预报是什么",
+    "expected": []
+  }
+]
