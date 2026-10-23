@@ -14,9 +14,8 @@ async function health() {
     const res = await fetch('/api/health');
     if (!res.ok) throw new Error();
     const state = await res.json();
-    $('health').textContent = state.index_ready ? `${state.commands.toLocaleString()} 个命令 · ${state.vector_ready ? '混合检索' : '关键词检索'}` : '等待建立知识库';
     if (!state.index_ready) $('notice').textContent = state.error || '请先审核 Markdown 知识库，再按 README 配置向量化。';
-  } catch { $('health').textContent = '服务暂不可用'; }
+  } catch { $('notice').textContent = '服务暂不可用，请稍后重试。'; }
 }
 
 function addCopyButtons() {

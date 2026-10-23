@@ -61,7 +61,14 @@ def main():
                 errors = []
                 page.on("pageerror", lambda error: errors.append(str(error)))
                 page.goto(f"http://127.0.0.1:{port}")
-                expect(page.locator("#health")).to_contain_text("1 个")
+                assert page.request.get(f"http://127.0.0.1:{port}/api/health").json()["commands"] == 1
+                assert page.locator("#health, .library, .sidebar nav").count() == 0
+                expect(page.locator(".repo-link")).to_have_attribute(
+                    "href", "https://github.com/Comet966/LinRag"
+                )
+                assert page.locator(".repo-link img").evaluate(
+                    "img => img.complete && img.naturalWidth > 0 && img.width === 16 && img.height === 16"
+                )
                 page.screenshot(path=str(artifacts / "desktop-home.png"), full_page=True)
                 expect(page.locator("#query")).to_be_focused()
                 page.locator("#query").fill("grep -r")
