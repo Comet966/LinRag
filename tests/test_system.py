@@ -6,12 +6,12 @@ import httpx
 import pytest
 from fastapi.testclient import TestClient
 
-from linuxrag.app import create_app
-from linuxrag.config import Endpoint, Settings
-from linuxrag.corpus import Chunk, read_corpus, split_markdown
-from linuxrag.index import Index, build_index, tokenize
-from linuxrag.provider import Provider, ProviderError
-from linuxrag.rendering import render_markdown
+from linrag.app import create_app
+from linrag.config import Endpoint, Settings
+from linrag.corpus import Chunk, read_corpus, split_markdown
+from linrag.index import Index, build_index, tokenize
+from linrag.provider import Provider, ProviderError
+from linrag.rendering import render_markdown
 
 
 @pytest.fixture

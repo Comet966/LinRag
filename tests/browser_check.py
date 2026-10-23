@@ -9,10 +9,10 @@ from pathlib import Path
 import uvicorn
 from playwright.sync_api import expect, sync_playwright
 
-from linuxrag.app import create_app
-from linuxrag.config import Settings
-from linuxrag.corpus import Chunk
-from linuxrag.index import Index, build_index
+from linrag.app import create_app
+from linrag.config import Settings
+from linrag.corpus import Chunk
+from linrag.index import Index, build_index
 
 
 def main():

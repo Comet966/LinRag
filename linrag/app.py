@@ -37,7 +37,7 @@ def create_app(settings: Settings | None = None, index: Index | None = None) -> 
             app.state.index_error = "索引无法读取，请重新建立索引并重启服务。"
         yield
 
-    app = FastAPI(title="LinuxRag", version="0.1.0", lifespan=lifespan)
+    app = FastAPI(title="LinRag", version="0.1.0", lifespan=lifespan)
     static = Path(__file__).parent / "static"
     app.mount("/static", StaticFiles(directory=static), name="static")
 

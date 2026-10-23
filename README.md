@@ -1,4 +1,4 @@
-# LinuxRag
+# LinRag
 
 一个轻量的 Linux 命令RAG搜索网站。
 ## 功能与亮点
@@ -38,14 +38,14 @@ EMBED_MODEL=your-embedding-model
 先参考[知识库审核入口](knowledge/REVIEW.md)检查语料，再校验、构建索引并启动服务：
 
 ```bash
-uv run linuxrag validate
-uv run linuxrag build
-uv run linuxrag serve
+uv run linrag validate
+uv run linrag build
+uv run linrag serve
 ```
 
 打开 <http://127.0.0.1:8000>
 
-构建向量索引及语义查询会调用配置的模型服务。若只需关键词检索，可使用 `uv run linuxrag build --lexical-only`，无需配置 Embedding 服务。
+构建向量索引及语义查询会调用配置的模型服务。若只需关键词检索，可使用 `uv run linrag build --lexical-only`，无需配置 Embedding 服务。
 
 ## 知识库维护
 
@@ -67,17 +67,19 @@ uv run linuxrag serve
 
 ```bash
 uv run pytest -q
-uv run ruff check linuxrag tests
+uv run ruff check linrag tests
 ```
 
 单元测试使用模拟 Embedding，不调用真实模型。建立索引后，可运行检索测试：
 
 ```bash
-uv run linuxrag evaluate
+uv run linrag evaluate
 ```
 
 测试用例位于 `eval/cases.json`，报告默认写入 `data/evaluation.json`；混合检索测试会调用配置的 Embedding 服务。
 
 ## 来源
+
+项目源码：[Comet966/LinRag](https://github.com/Comet966/LinRag)。
 
 命令文档基于 [linux-command](https://github.com/jaywcjlove/linux-command) 整理。来源、固定版本和改写说明见[第三方声明](THIRD_PARTY_NOTICES.md)。

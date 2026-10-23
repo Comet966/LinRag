@@ -44,7 +44,7 @@ def main():
         elif args.action == "serve":
             import uvicorn
 
-            uvicorn.run("linuxrag.app:app", host=args.host, port=args.port)
+            uvicorn.run("linrag.app:app", host=args.host, port=args.port)
         else:
             index = Index(settings)
             if not index.rows:

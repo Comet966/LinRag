@@ -10,7 +10,7 @@
 
 检查用途、参数和示例是否准确，展示卡片与检索文本是否一致，并注意不同实现和发行版的差异。示例中的路径、用户、PID 和主机需要按实际环境替换；文档不代表已经在 Linux 上逐条执行验证。
 
-修改内容后运行 `uv run linuxrag validate` 检查语料结构、文件映射与来源摘要。该命令不调用模型，也不验证命令的实际运行效果。
+修改内容后运行 `uv run linrag validate` 检查语料结构、文件映射与来源摘要。该命令不调用模型，也不验证命令的实际运行效果。
 
 整理依据与校验边界见 [CURATION.md](CURATION.md)，来源版本见 [sources.lock.json](sources.lock.json)。审核状态以 `manifest.json` 中的 `review` 字段为准，目前全部为 `pending_user_review`。
 
