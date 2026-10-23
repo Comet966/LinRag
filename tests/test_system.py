@@ -272,8 +272,8 @@ def test_embeddings_receive_only_retrieval_text(settings, chunks):
 
 def test_curated_corpus_is_complete_and_mapped():
     chunks, sources = read_corpus(Path("knowledge"))
-    assert len({c.command for c in chunks}) == 50
-    assert len(chunks) == 200
+    assert len({c.command for c in chunks}) == 200
+    assert len(chunks) == 800
     assert len({c.id for c in chunks}) == len(chunks)
     assert set(sources) == {"linux-command"}
     for chunk in chunks:

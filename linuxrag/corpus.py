@@ -91,7 +91,8 @@ def read_corpus(knowledge_dir: Path) -> tuple[list[Chunk], dict]:
 
     for entry in manifest["commands"]:
         command = entry["id"]
-        if command in seen or not re.fullmatch(r"[a-z][a-z0-9_-]*", command):
+        # Command names may start with a digit (for example 7z).
+        if command in seen or not re.fullmatch(r"[a-z0-9][a-z0-9_-]*", command):
             raise ValueError(f"重复或无效的命令标识：{command}")
         seen.add(command)
         card, retrieval = read(entry["card"]), read(entry["retrieval"])

@@ -1,6 +1,6 @@
 # 第三方语料声明
 
-本轮知识库基于 [jaywcjlove/linux-command](https://github.com/jaywcjlove/linux-command) 的 50 份 Markdown 原文整理，固定提交为 `cd17682d612e6fdfaff29261c11ffbc3f951f41d`。
+本轮知识库基于 [jaywcjlove/linux-command](https://github.com/jaywcjlove/linux-command) 的 200 份 Markdown 原文整理，固定提交为 `cd17682d612e6fdfaff29261c11ffbc3f951f41d`。
 
 原文保存在 `knowledge/raw/linux-command/`，原始 MIT 许可全文位于 `knowledge/licenses/linux-command.txt`。保留上游作者和贡献者署名。
 
