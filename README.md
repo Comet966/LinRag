@@ -1,6 +1,7 @@
 # LinRag
 
 一个轻量的 Linux 命令RAG搜索网站。
+
 ## 功能与亮点
 
 - 支持自然语言快速搜索
@@ -12,8 +13,9 @@
 
 ## 在线快速体验
 
+[访问 LinRag](https://linrag.cometapi.uno)
 
-
+项目已上线，当前进度与后续安排见[项目规划](docs/ROADMAP.md)。
 ## 快速本地构建
 
 需要 Python 3.11+ 和 [uv](https://docs.astral.sh/uv/)。在项目根目录执行：
