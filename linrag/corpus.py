@@ -91,8 +91,8 @@ def read_corpus(knowledge_dir: Path) -> tuple[list[Chunk], dict]:
 
     for entry in manifest["commands"]:
         command = entry["id"]
-        # Command names may start with a digit (for example 7z).
-        if command in seen or not re.fullmatch(r"[a-z0-9][a-z0-9_-]*", command):
+        # Preserve complete subcommand names, for example git status or docker compose up.
+        if command in seen or not re.fullmatch(r"[a-z0-9][a-z0-9_-]*(?: [a-z0-9][a-z0-9_-]*)*", command):
             raise ValueError(f"重复或无效的命令标识：{command}")
         seen.add(command)
         card, retrieval = read(entry["card"]), read(entry["retrieval"])
@@ -137,6 +137,9 @@ def preserve_licenses(knowledge_dir: Path, target: Path, sources: dict) -> None:
         dest = target / name
         dest.mkdir(exist_ok=True)
         (dest / "LICENSE.txt").write_bytes((knowledge_dir / "licenses" / f"{name}.txt").read_bytes())
+        notice = knowledge_dir / "licenses" / f"{name}.NOTICE.txt"
+        if notice.is_file():
+            (dest / "NOTICE.txt").write_bytes(notice.read_bytes())
         (dest / "ATTRIBUTION.json").write_text(json.dumps(info, ensure_ascii=False, indent=2))
 
 

@@ -5,5 +5,83 @@
     "license": "MIT",
     "author": "jaywcjlove/linux-command contributors",
     "revision": "cd17682d612e6fdfaff29261c11ffbc3f951f41d"
+  },
+  "git": {
+    "repo": "https://github.com/git/git",
+    "ref": "HEAD",
+    "license": "GPL-2.0-only",
+    "author": "Git contributors",
+    "revision": "7e34d8174dcda3435d1404c9a30bef46afe6c13e"
+  },
+  "docker-cli": {
+    "repo": "https://github.com/docker/cli",
+    "ref": "HEAD",
+    "license": "Apache-2.0",
+    "author": "Docker CLI contributors",
+    "revision": "6d274590f2f63276a54da8adf475a455d21c1fdd"
+  },
+  "docker-compose": {
+    "repo": "https://github.com/docker/compose",
+    "ref": "HEAD",
+    "license": "Apache-2.0",
+    "author": "Docker Compose contributors",
+    "revision": "e18ab3d8797716b565e47b32f0ddb60e052fbbb6"
+  },
+  "jq": {
+    "repo": "https://github.com/jqlang/jq",
+    "ref": "HEAD",
+    "revision": "ac35c7dcbb991fa0f3c3196dd00ca479211e9847",
+    "license": "CC-BY-3.0",
+    "author": "jqlang contributors; Stephen Dolan",
+    "license_note": "docs/ 文档采用 CC BY 3.0；COPYING 保留版权声明与许可 URI，程序自身的 MIT 许可不适用于本条文档。"
+  },
+  "ripgrep": {
+    "repo": "https://github.com/BurntSushi/ripgrep",
+    "ref": "HEAD",
+    "revision": "6892bc2b7efe5909cbbeec8f757ed2c4c76b1d30",
+    "license": "MIT",
+    "author": "Andrew Gallant and ripgrep contributors"
+  },
+  "python": {
+    "repo": "https://github.com/python/cpython",
+    "ref": "HEAD",
+    "revision": "ffe13151c0d441884e406507cdc64d22e047fd7d",
+    "license": "PSF-2.0",
+    "author": "Python Software Foundation and contributors"
+  },
+  "pip": {
+    "repo": "https://github.com/pypa/pip",
+    "ref": "HEAD",
+    "revision": "0d09686649a97c2dd304322b191e44eb06ab4d44",
+    "license": "MIT",
+    "author": "pip contributors"
+  },
+  "npm": {
+    "repo": "https://github.com/npm/cli",
+    "ref": "HEAD",
+    "revision": "311ff5effbb1f96181c89a1ce6ebfe0c369e1ec1",
+    "license": "Artistic-2.0",
+    "author": "npm, Inc. and Contributors"
+  },
+  "uv": {
+    "repo": "https://github.com/astral-sh/uv",
+    "ref": "HEAD",
+    "revision": "6fe4f0f5cfa8322e97af4479cbfb3d53a3ce9596",
+    "license": "MIT",
+    "author": "Astral Software Inc. and uv contributors"
+  },
+  "kubectl": {
+    "repo": "https://github.com/kubernetes/kubectl",
+    "ref": "HEAD",
+    "revision": "a161d6d394d58d485466a0d70d0dfcd870ae058b",
+    "license": "Apache-2.0",
+    "author": "The Kubernetes Authors"
+  },
+  "helm": {
+    "repo": "https://github.com/helm/helm",
+    "ref": "HEAD",
+    "revision": "2fe5d209e61162bd4b268ba0319c0782b9f49ca1",
+    "license": "Apache-2.0",
+    "author": "The Helm Authors"
   }
 }

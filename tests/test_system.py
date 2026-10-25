@@ -272,10 +272,13 @@ def test_embeddings_receive_only_retrieval_text(settings, chunks):
 
 def test_curated_corpus_is_complete_and_mapped():
     chunks, sources = read_corpus(Path("knowledge"))
-    assert len({c.command for c in chunks}) == 200
-    assert len(chunks) == 800
+    assert len({c.command for c in chunks}) == 295
+    assert len(chunks) == 1180
     assert len({c.id for c in chunks}) == len(chunks)
-    assert set(sources) == {"linux-command"}
+    assert set(sources) == {
+        "linux-command", "git", "docker-cli", "docker-compose", "jq", "ripgrep",
+        "python", "pip", "npm", "uv", "kubectl", "helm",
+    }
     for chunk in chunks:
         assert chunk.card_text.startswith(f"## {chunk.command}\n")
         assert f"命令：{chunk.command}" in chunk.text
@@ -300,3 +303,50 @@ def test_full_corpus_lexical_smoke(settings):
         result = index.search(query, mode="lexical")
         assert expected in {r["command"] for r in result["results"]}, query
         assert len({r["command"] for r in result["results"]}) == len(result["results"])
+
+
+@pytest.mark.parametrize(
+    ("query", "expected"),
+    [
+        ("git status", "git status"),
+        ("git restore --staged", "git restore"),
+        ("git   status", "git status"),
+        ("docker run --rm", "docker run"),
+        ("docker compose up -d", "docker compose up"),
+        ("docker compose exec", "docker compose exec"),
+        ("查看未提交修改", "git status"),
+        ("列出已退出容器", "docker ps"),
+        ("容器内存占用", "docker stats"),
+        ("校验 Compose 配置", "docker compose config"),
+    ],
+)
+def test_tool_subcommands_are_searchable(settings, query, expected):
+    chunks, sources = read_corpus(Path("knowledge"))
+    build_index(settings, chunks, sources, lexical_only=True)
+    result = Index(settings).search(query, mode="lexical")
+    assert result["results"][0]["command_id"] == expected
+    assert result["results"][0]["text"].startswith(f"## {expected}\n")
+
+
+def test_tool_source_licenses_and_notices_are_preserved(settings):
+    chunks, sources = read_corpus(Path("knowledge"))
+    metadata = build_index(settings, chunks, sources, lexical_only=True)
+    root = settings.data_dir / "indexes" / metadata["generation"] / "licenses"
+    for name in sources:
+        assert (root / name / "LICENSE.txt").read_bytes() == Path(
+            "knowledge", "licenses", f"{name}.txt"
+        ).read_bytes()
+    for name in sources:
+        notice = Path("knowledge", "licenses", f"{name}.NOTICE.txt")
+        if notice.is_file():
+            assert (root / name / "NOTICE.txt").read_bytes() == notice.read_bytes()
+
+
+@pytest.mark.parametrize("command", ["git  status", "git/status", "git;status", " git status"])
+def test_invalid_subcommand_identifiers_are_rejected(tmp_path, command):
+    manifest = json.loads(Path("knowledge/manifest.json").read_text())
+    manifest["commands"] = [dict(manifest["commands"][0], id=command)]
+    (tmp_path / "manifest.json").write_text(json.dumps(manifest))
+    (tmp_path / "sources.lock.json").write_text(json.dumps(manifest["sources"]))
+    with pytest.raises(ValueError, match="重复或无效的命令标识"):
+        read_corpus(tmp_path)

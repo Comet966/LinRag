@@ -5,7 +5,7 @@
 
 - 支持自然语言快速搜索
 - 支持以命令搜索
-- 收录 200 个常用命令
+- 收录 295 个命令条目，覆盖 Linux、Git、Docker、数据处理、包管理和 Kubernetes 工具
 - 简洁明了的展示卡片
 - 快捷的操作方式
 - 向量化语料和展示内容分离实现更精确搜索
@@ -82,4 +82,4 @@ uv run linrag evaluate
 
 项目源码：[Comet966/LinRag](https://github.com/Comet966/LinRag)。
 
-命令文档基于 [linux-command](https://github.com/jaywcjlove/linux-command) 整理。来源、固定版本和改写说明见[第三方声明](THIRD_PARTY_NOTICES.md)。
+Linux 基础命令基于 [linux-command](https://github.com/jaywcjlove/linux-command)（MIT）整理；Git、Docker、jq、ripgrep、Python/pip、npm、uv、kubectl 和 Helm 条目依据官方文档或命令源码整理，原文和许可随知识库保存。来源、固定版本和改写说明见[第三方声明](THIRD_PARTY_NOTICES.md)。

@@ -1,6 +1,6 @@
 # 知识库审核目录
 
-当前收录 **200 个命令**。本目录依据 `manifest.json` 与实际 Markdown 文件整理，按命令名排序。
+当前收录 **295 个命令**。本目录依据 `manifest.json` 与实际 Markdown 文件整理，按命令名排序。其中 Linux 基础命令 200 个，Git 28 个，Docker 25 个，Docker Compose 10 个，以及 jq、ripgrep、Python/pip、npm、uv、kubectl、Helm 共 32 个条目；子命令分别建卡。
 
 - **展示卡片**：命令用途、常用参数和 2–4 个使用示例。
 - **检索文本**：任务表达、参数行为、示例和适用边界，用于关键词检索与向量化。
@@ -57,6 +57,41 @@
 | `dirname` | 取路径中的目录部分。 | GNU coreutils | [卡片](cards/dirname.md) | [检索](retrieval/dirname.md) | [原文](raw/linux-command/dirname.md) |
 | `dmesg` | 读取内核环形缓冲区消息。 | util-linux | [卡片](cards/dmesg.md) | [检索](retrieval/dmesg.md) | [原文](raw/linux-command/dmesg.md) |
 | `dnf` | Fedora、RHEL 8+ 的包管理器。 | DNF | [卡片](cards/dnf.md) | [检索](retrieval/dnf.md) | [原文](raw/linux-command/dnf.md) |
+| `docker` | 管理镜像、容器、网络和数据卷的命令行工具。 | Docker CLI / Docker Engine | [卡片](cards/docker.md) | [检索](retrieval/docker.md) | [原文](raw/docker-cli/docker.md) |
+| `docker build` | 根据 Dockerfile 和构建上下文构建镜像。 | Docker CLI / Docker Engine | [卡片](cards/docker-build.md) | [检索](retrieval/docker-build.md) | [原文](raw/docker-cli/docker-build.md) |
+| `docker compose` | 使用 Compose 文件管理多容器应用。 | Docker Compose 插件（docker compose） | [卡片](cards/docker-compose.md) | [检索](retrieval/docker-compose.md) | [原文](raw/docker-compose/docker-compose.md) |
+| `docker compose build` | 根据 Compose 配置构建服务镜像。 | Docker Compose 插件（docker compose） | [卡片](cards/docker-compose-build.md) | [检索](retrieval/docker-compose-build.md) | [原文](raw/docker-compose/docker-compose-build.md) |
+| `docker compose config` | 解析、合并和校验 Compose 配置。 | Docker Compose 插件（docker compose） | [卡片](cards/docker-compose-config.md) | [检索](retrieval/docker-compose-config.md) | [原文](raw/docker-compose/docker-compose-config.md) |
+| `docker compose down` | 停止并删除 Compose 项目的服务容器与网络。 | Docker Compose 插件（docker compose） | [卡片](cards/docker-compose-down.md) | [检索](retrieval/docker-compose-down.md) | [原文](raw/docker-compose/docker-compose-down.md) |
+| `docker compose exec` | 在已运行的 Compose 服务容器中执行命令。 | Docker Compose 插件（docker compose） | [卡片](cards/docker-compose-exec.md) | [检索](retrieval/docker-compose-exec.md) | [原文](raw/docker-compose/docker-compose-exec.md) |
+| `docker compose logs` | 查看 Compose 服务的日志输出。 | Docker Compose 插件（docker compose） | [卡片](cards/docker-compose-logs.md) | [检索](retrieval/docker-compose-logs.md) | [原文](raw/docker-compose/docker-compose-logs.md) |
+| `docker compose ps` | 查看 Compose 项目的服务容器状态。 | Docker Compose 插件（docker compose） | [卡片](cards/docker-compose-ps.md) | [检索](retrieval/docker-compose-ps.md) | [原文](raw/docker-compose/docker-compose-ps.md) |
+| `docker compose pull` | 拉取 Compose 服务引用的镜像。 | Docker Compose 插件（docker compose） | [卡片](cards/docker-compose-pull.md) | [检索](retrieval/docker-compose-pull.md) | [原文](raw/docker-compose/docker-compose-pull.md) |
+| `docker compose run` | 为某个 Compose 服务创建一次性任务容器。 | Docker Compose 插件（docker compose） | [卡片](cards/docker-compose-run.md) | [检索](retrieval/docker-compose-run.md) | [原文](raw/docker-compose/docker-compose-run.md) |
+| `docker compose up` | 创建并启动 Compose 应用的服务容器。 | Docker Compose 插件（docker compose） | [卡片](cards/docker-compose-up.md) | [检索](retrieval/docker-compose-up.md) | [原文](raw/docker-compose/docker-compose-up.md) |
+| `docker cp` | 在容器与宿主机之间复制文件或目录。 | Docker CLI / Docker Engine | [卡片](cards/docker-cp.md) | [检索](retrieval/docker-cp.md) | [原文](raw/docker-cli/docker-cp.md) |
+| `docker exec` | 在已经运行的容器中执行新进程。 | Docker CLI / Docker Engine | [卡片](cards/docker-exec.md) | [检索](retrieval/docker-exec.md) | [原文](raw/docker-cli/docker-exec.md) |
+| `docker images` | 列出本地镜像及其标签和大小。 | Docker CLI / Docker Engine | [卡片](cards/docker-images.md) | [检索](retrieval/docker-images.md) | [原文](raw/docker-cli/docker-images.md) |
+| `docker info` | 查看 Docker Engine 的系统配置和资源信息。 | Docker CLI / Docker Engine | [卡片](cards/docker-info.md) | [检索](retrieval/docker-info.md) | [原文](raw/docker-cli/docker-info.md) |
+| `docker inspect` | 读取容器或其他 Docker 对象的详细配置。 | Docker CLI / Docker Engine | [卡片](cards/docker-inspect.md) | [检索](retrieval/docker-inspect.md) | [原文](raw/docker-cli/docker-inspect.md) |
+| `docker login` | 登录镜像仓库并保存认证信息。 | Docker CLI / Docker Engine | [卡片](cards/docker-login.md) | [检索](retrieval/docker-login.md) | [原文](raw/docker-cli/docker-login.md) |
+| `docker logout` | 移除 Docker 保存的指定镜像仓库登录信息。 | Docker CLI / Docker Engine | [卡片](cards/docker-logout.md) | [检索](retrieval/docker-logout.md) | [原文](raw/docker-cli/docker-logout.md) |
+| `docker logs` | 读取容器标准输出与标准错误的日志。 | Docker CLI / Docker Engine | [卡片](cards/docker-logs.md) | [检索](retrieval/docker-logs.md) | [原文](raw/docker-cli/docker-logs.md) |
+| `docker network ls` | 列出 Docker 网络。 | Docker CLI / Docker Engine | [卡片](cards/docker-network-ls.md) | [检索](retrieval/docker-network-ls.md) | [原文](raw/docker-cli/docker-network-ls.md) |
+| `docker ps` | 列出容器及运行状态。 | Docker CLI / Docker Engine | [卡片](cards/docker-ps.md) | [检索](retrieval/docker-ps.md) | [原文](raw/docker-cli/docker-ps.md) |
+| `docker pull` | 从镜像仓库拉取镜像到本地。 | Docker CLI / Docker Engine | [卡片](cards/docker-pull.md) | [检索](retrieval/docker-pull.md) | [原文](raw/docker-cli/docker-pull.md) |
+| `docker push` | 将本地镜像上传到目标镜像仓库。 | Docker CLI / Docker Engine | [卡片](cards/docker-push.md) | [检索](retrieval/docker-push.md) | [原文](raw/docker-cli/docker-push.md) |
+| `docker restart` | 停止并重新启动已有容器。 | Docker CLI / Docker Engine | [卡片](cards/docker-restart.md) | [检索](retrieval/docker-restart.md) | [原文](raw/docker-cli/docker-restart.md) |
+| `docker rm` | 删除已有容器及其可写层。 | Docker CLI / Docker Engine | [卡片](cards/docker-rm.md) | [检索](retrieval/docker-rm.md) | [原文](raw/docker-cli/docker-rm.md) |
+| `docker rmi` | 删除本地镜像或取消镜像标签。 | Docker CLI / Docker Engine | [卡片](cards/docker-rmi.md) | [检索](retrieval/docker-rmi.md) | [原文](raw/docker-cli/docker-rmi.md) |
+| `docker run` | 从镜像创建并启动一个新容器。 | Docker CLI / Docker Engine | [卡片](cards/docker-run.md) | [检索](retrieval/docker-run.md) | [原文](raw/docker-cli/docker-run.md) |
+| `docker start` | 启动已经存在但停止的容器。 | Docker CLI / Docker Engine | [卡片](cards/docker-start.md) | [检索](retrieval/docker-start.md) | [原文](raw/docker-cli/docker-start.md) |
+| `docker stats` | 查看容器的 CPU、内存和网络资源统计。 | Docker CLI / Docker Engine | [卡片](cards/docker-stats.md) | [检索](retrieval/docker-stats.md) | [原文](raw/docker-cli/docker-stats.md) |
+| `docker stop` | 请求运行中的容器停止并等待退出。 | Docker CLI / Docker Engine | [卡片](cards/docker-stop.md) | [检索](retrieval/docker-stop.md) | [原文](raw/docker-cli/docker-stop.md) |
+| `docker system df` | 查看 Docker 对象的磁盘占用及可回收空间。 | Docker CLI / Docker Engine | [卡片](cards/docker-system-df.md) | [检索](retrieval/docker-system-df.md) | [原文](raw/docker-cli/docker-system-df.md) |
+| `docker tag` | 为已有镜像增加一个本地名称或标签。 | Docker CLI / Docker Engine | [卡片](cards/docker-tag.md) | [检索](retrieval/docker-tag.md) | [原文](raw/docker-cli/docker-tag.md) |
+| `docker version` | 显示 Docker 客户端和服务端版本。 | Docker CLI / Docker Engine | [卡片](cards/docker-version.md) | [检索](retrieval/docker-version.md) | [原文](raw/docker-cli/docker-version.md) |
+| `docker volume ls` | 列出 Docker 管理的数据卷。 | Docker CLI / Docker Engine | [卡片](cards/docker-volume-ls.md) | [检索](retrieval/docker-volume-ls.md) | [原文](raw/docker-cli/docker-volume-ls.md) |
 | `dpkg` | 操作本地 deb 包和包数据库。 | dpkg | [卡片](cards/dpkg.md) | [检索](retrieval/dpkg.md) | [原文](raw/linux-command/dpkg.md) |
 | `du` | 估算文件和目录占用的磁盘空间。 | GNU coreutils | [卡片](cards/du.md) | [检索](retrieval/du.md) | [原文](raw/linux-command/du.md) |
 | `echo` | 输出字符串或变量值。 | Bash 内建 / GNU coreutils | [卡片](cards/echo.md) | [检索](retrieval/echo.md) | [原文](raw/linux-command/echo.md) |
@@ -72,11 +107,44 @@
 | `fsck` | 检查并修复文件系统错误。 | util-linux | [卡片](cards/fsck.md) | [检索](retrieval/fsck.md) | [原文](raw/linux-command/fsck.md) |
 | `gdb` | 命令行调试器，可断点单步查值。 | GDB | [卡片](cards/gdb.md) | [检索](retrieval/gdb.md) | [原文](raw/linux-command/gdb.md) |
 | `getfacl` | 查看文件和目录的访问控制列表。 | acl | [卡片](cards/getfacl.md) | [检索](retrieval/getfacl.md) | [原文](raw/linux-command/getfacl.md) |
+| `git` | 分布式版本控制工具，用于管理代码历史、分支和协作。 | Git 2.23+ | [卡片](cards/git.md) | [检索](retrieval/git.md) | [原文](raw/git/git.adoc) |
+| `git add` | 把文件内容或删除操作写入暂存区。 | Git 2.23+ | [卡片](cards/git-add.md) | [检索](retrieval/git-add.md) | [原文](raw/git/git-add.adoc) |
+| `git blame` | 逐行显示文件内容最后修改的提交和作者。 | Git 2.23+ | [卡片](cards/git-blame.md) | [检索](retrieval/git-blame.md) | [原文](raw/git/git-blame.adoc) |
+| `git branch` | 列出、创建或管理本地分支。 | Git 2.23+ | [卡片](cards/git-branch.md) | [检索](retrieval/git-branch.md) | [原文](raw/git/git-branch.adoc) |
+| `git checkout` | 切换分支或从指定版本恢复文件。 | Git 2.23+ | [卡片](cards/git-checkout.md) | [检索](retrieval/git-checkout.md) | [原文](raw/git/git-checkout.adoc) |
+| `git cherry-pick` | 将指定提交的改动应用为当前分支的新提交。 | Git 2.23+ | [卡片](cards/git-cherry-pick.md) | [检索](retrieval/git-cherry-pick.md) | [原文](raw/git/git-cherry-pick.adoc) |
+| `git clean` | 预览或删除工作区中的未跟踪文件。 | Git 2.23+ | [卡片](cards/git-clean.md) | [检索](retrieval/git-clean.md) | [原文](raw/git/git-clean.adoc) |
+| `git clone` | 克隆远程或本地仓库并建立工作副本。 | Git 2.23+ | [卡片](cards/git-clone.md) | [检索](retrieval/git-clone.md) | [原文](raw/git/git-clone.adoc) |
+| `git commit` | 将暂存区内容保存为一个本地提交。 | Git 2.23+ | [卡片](cards/git-commit.md) | [检索](retrieval/git-commit.md) | [原文](raw/git/git-commit.adoc) |
+| `git config` | 读取和设置 Git 配置项。 | Git | [卡片](cards/git-config.md) | [检索](retrieval/git-config.md) | [原文](raw/git/git-config.adoc) |
+| `git diff` | 比较工作区、暂存区或指定提交之间的差异。 | Git 2.23+ | [卡片](cards/git-diff.md) | [检索](retrieval/git-diff.md) | [原文](raw/git/git-diff.adoc) |
+| `git fetch` | 从远程下载对象并更新远程跟踪引用。 | Git 2.23+ | [卡片](cards/git-fetch.md) | [检索](retrieval/git-fetch.md) | [原文](raw/git/git-fetch.adoc) |
+| `git init` | 在目录中初始化 Git 仓库。 | Git 2.23+ | [卡片](cards/git-init.md) | [检索](retrieval/git-init.md) | [原文](raw/git/git-init.adoc) |
+| `git log` | 查看提交历史及各提交的改动。 | Git 2.23+ | [卡片](cards/git-log.md) | [检索](retrieval/git-log.md) | [原文](raw/git/git-log.adoc) |
+| `git merge` | 把其他分支的历史合并到当前分支。 | Git 2.23+ | [卡片](cards/git-merge.md) | [检索](retrieval/git-merge.md) | [原文](raw/git/git-merge.adoc) |
+| `git pull` | 获取远程更新并整合到当前分支。 | Git 2.23+ | [卡片](cards/git-pull.md) | [检索](retrieval/git-pull.md) | [原文](raw/git/git-pull.adoc) |
+| `git push` | 把本地引用和提交发送到远程仓库。 | Git 2.23+ | [卡片](cards/git-push.md) | [检索](retrieval/git-push.md) | [原文](raw/git/git-push.adoc) |
+| `git rebase` | 将当前分支的提交重新应用到新的基底。 | Git 2.23+ | [卡片](cards/git-rebase.md) | [检索](retrieval/git-rebase.md) | [原文](raw/git/git-rebase.adoc) |
+| `git reflog` | 查看本地引用曾经指向的提交记录。 | Git 2.23+ | [卡片](cards/git-reflog.md) | [检索](retrieval/git-reflog.md) | [原文](raw/git/git-reflog.adoc) |
+| `git remote` | 管理远程仓库地址和跟踪配置。 | Git 2.23+ | [卡片](cards/git-remote.md) | [检索](retrieval/git-remote.md) | [原文](raw/git/git-remote.adoc) |
+| `git reset` | 调整暂存区，或将当前分支移动到指定提交。 | Git 2.23+ | [卡片](cards/git-reset.md) | [检索](retrieval/git-reset.md) | [原文](raw/git/git-reset.adoc) |
+| `git restore` | 从暂存区或指定提交恢复工作区和暂存区文件。 | Git 2.23+ | [卡片](cards/git-restore.md) | [检索](retrieval/git-restore.md) | [原文](raw/git/git-restore.adoc) |
+| `git revert` | 通过新增反向提交撤销已有提交的改动。 | Git 2.23+ | [卡片](cards/git-revert.md) | [检索](retrieval/git-revert.md) | [原文](raw/git/git-revert.adoc) |
+| `git show` | 显示某个 Git 对象及提交的详细内容。 | Git 2.23+ | [卡片](cards/git-show.md) | [检索](retrieval/git-show.md) | [原文](raw/git/git-show.adoc) |
+| `git stash` | 临时保存和恢复尚未提交的工作。 | Git 2.23+ | [卡片](cards/git-stash.md) | [检索](retrieval/git-stash.md) | [原文](raw/git/git-stash.adoc) |
+| `git status` | 查看工作区、暂存区和分支的当前状态。 | Git 2.23+ | [卡片](cards/git-status.md) | [检索](retrieval/git-status.md) | [原文](raw/git/git-status.adoc) |
+| `git switch` | 切换工作分支，或创建新分支后切换。 | Git 2.23+ | [卡片](cards/git-switch.md) | [检索](retrieval/git-switch.md) | [原文](raw/git/git-switch.adoc) |
+| `git tag` | 列出或创建提交的标签。 | Git 2.23+ | [卡片](cards/git-tag.md) | [检索](retrieval/git-tag.md) | [原文](raw/git/git-tag.adoc) |
 | `grep` | 搜索文本中匹配模式的行。 | GNU grep | [卡片](cards/grep.md) | [检索](retrieval/grep.md) | [原文](raw/linux-command/grep.md) |
 | `groups` | 打印用户所属的组名列表。 | GNU coreutils | [卡片](cards/groups.md) | [检索](retrieval/groups.md) | [原文](raw/linux-command/groups.md) |
 | `gzip` | 压缩或解压单个文件，默认替换原文件。 | gzip | [卡片](cards/gzip.md) | [检索](retrieval/gzip.md) | [原文](raw/linux-command/gzip.md) |
 | `halt` | 停止系统，现代 systemd 下即关机。 | systemd | [卡片](cards/halt.md) | [检索](retrieval/halt.md) | [原文](raw/linux-command/halt.md) |
 | `head` | 显示文件开头的部分内容。 | GNU coreutils | [卡片](cards/head.md) | [检索](retrieval/head.md) | [原文](raw/linux-command/head.md) |
+| `helm` | 使用 Chart 管理 Kubernetes 应用的模板与发布。 | Helm 3/4 基础操作 | [卡片](cards/helm.md) | [检索](retrieval/helm.md) | [原文](raw/helm/helm.go) |
+| `helm install` | 从 Chart 创建一个新的 Helm 发布。 | Helm 3/4 基础操作 | [卡片](cards/helm-install.md) | [检索](retrieval/helm-install.md) | [原文](raw/helm/helm-install.go) |
+| `helm list` | 列出命名空间或集群内的 Helm 发布记录。 | Helm 3/4 基础操作 | [卡片](cards/helm-list.md) | [检索](retrieval/helm-list.md) | [原文](raw/helm/helm-list.go) |
+| `helm template` | 在本地渲染 Chart 为 Kubernetes YAML。 | Helm 3/4 基础操作 | [卡片](cards/helm-template.md) | [检索](retrieval/helm-template.md) | [原文](raw/helm/helm-template.go) |
+| `helm upgrade` | 用新的 Chart 或配置更新已有 Helm 发布。 | Helm 3/4 基础操作 | [卡片](cards/helm-upgrade.md) | [检索](retrieval/helm-upgrade.md) | [原文](raw/helm/helm-upgrade.go) |
 | `host` | 查询域名的 DNS 记录与反向解析。 | BIND utils | [卡片](cards/host.md) | [检索](retrieval/host.md) | [原文](raw/linux-command/host.md) |
 | `hostname` | 显示或临时设置主机名。 | hostname | [卡片](cards/hostname.md) | [检索](retrieval/hostname.md) | [原文](raw/linux-command/hostname.md) |
 | `hostnamectl` | 查看或设置系统主机名。 | systemd | [卡片](cards/hostnamectl.md) | [检索](retrieval/hostnamectl.md) | [原文](raw/linux-command/hostnamectl.md) |
@@ -93,8 +161,16 @@
 | `jobs` | 列出当前 shell 的作业状态。 | Bash 内建 | [卡片](cards/jobs.md) | [检索](retrieval/jobs.md) | [原文](raw/linux-command/jobs.md) |
 | `join` | 按共同字段合并两个已排序文本。 | GNU coreutils | [卡片](cards/join.md) | [检索](retrieval/join.md) | [原文](raw/linux-command/join.md) |
 | `journalctl` | 查询和跟踪 systemd 日志。 | systemd | [卡片](cards/journalctl.md) | [检索](retrieval/journalctl.md) | [原文](raw/linux-command/journalctl.md) |
+| `jq` | 解析、筛选和转换 JSON 数据。 | jq 1.7+ 基础选项 | [卡片](cards/jq.md) | [检索](retrieval/jq.md) | [原文](raw/jq/jq.yml) |
 | `kill` | 向进程发送信号，默认请求正常终止。 | Bash / Linux kill common subset | [卡片](cards/kill.md) | [检索](retrieval/kill.md) | [原文](raw/linux-command/kill.md) |
 | `killall` | 按进程名向一组同名进程发信号。 | psmisc | [卡片](cards/killall.md) | [检索](retrieval/killall.md) | [原文](raw/linux-command/killall.md) |
+| `kubectl` | 访问和管理 Kubernetes 集群资源的命令行工具。 | kubectl / Kubernetes | [卡片](cards/kubectl.md) | [检索](retrieval/kubectl.md) | [原文](raw/kubectl/kubectl.md) |
+| `kubectl apply` | 根据资源清单创建或更新 Kubernetes 对象。 | kubectl / Kubernetes | [卡片](cards/kubectl-apply.md) | [检索](retrieval/kubectl-apply.md) | [原文](raw/kubectl/kubectl-apply.go) |
+| `kubectl describe` | 查看资源详情、状态和关联事件的可读摘要。 | kubectl / Kubernetes | [卡片](cards/kubectl-describe.md) | [检索](retrieval/kubectl-describe.md) | [原文](raw/kubectl/kubectl-describe.go) |
+| `kubectl exec` | 在 Kubernetes Pod 的运行中容器内执行命令。 | kubectl / Kubernetes | [卡片](cards/kubectl-exec.md) | [检索](retrieval/kubectl-exec.md) | [原文](raw/kubectl/kubectl-exec.go) |
+| `kubectl get` | 列出 Kubernetes 资源或读取指定资源。 | kubectl / Kubernetes | [卡片](cards/kubectl-get.md) | [检索](retrieval/kubectl-get.md) | [原文](raw/kubectl/kubectl-get.go) |
+| `kubectl logs` | 读取 Pod 容器的标准输出与标准错误日志。 | kubectl / Kubernetes | [卡片](cards/kubectl-logs.md) | [检索](retrieval/kubectl-logs.md) | [原文](raw/kubectl/kubectl-logs.go) |
+| `kubectl rollout status` | 等待并查看某个工作负载的滚动发布状态。 | kubectl / Kubernetes | [卡片](cards/kubectl-rollout-status.md) | [检索](retrieval/kubectl-rollout-status.md) | [原文](raw/kubectl/kubectl-rollout-status.go) |
 | `last` | 查看用户登录和系统重启历史。 | util-linux | [卡片](cards/last.md) | [检索](retrieval/last.md) | [原文](raw/linux-command/last.md) |
 | `ldd` | 列出程序或库依赖的共享库。 | glibc | [卡片](cards/ldd.md) | [检索](retrieval/ldd.md) | [原文](raw/linux-command/ldd.md) |
 | `less` | 分页浏览文本，支持前后翻页和搜索。 | less | [卡片](cards/less.md) | [检索](retrieval/less.md) | [原文](raw/linux-command/less.md) |
@@ -126,6 +202,12 @@
 | `nl` | 给文本加上行号后输出。 | GNU coreutils | [卡片](cards/nl.md) | [检索](retrieval/nl.md) | [原文](raw/linux-command/nl.md) |
 | `nmap` | 探测主机开放端口和服务版本。 | nmap | [卡片](cards/nmap.md) | [检索](retrieval/nmap.md) | [原文](raw/linux-command/nmap.md) |
 | `nohup` | 退出终端后仍运行命令。 | GNU coreutils | [卡片](cards/nohup.md) | [检索](retrieval/nohup.md) | [原文](raw/linux-command/nohup.md) |
+| `npm` | 管理 Node.js 项目的软件包、依赖和脚本。 | npm CLI | [卡片](cards/npm.md) | [检索](retrieval/npm.md) | [原文](raw/npm/npm.md) |
+| `npm ci` | 根据现有锁文件执行干净的项目依赖安装。 | npm CLI | [卡片](cards/npm-ci.md) | [检索](retrieval/npm-ci.md) | [原文](raw/npm/npm-ci.md) |
+| `npm install` | 安装 Node.js 项目依赖或添加指定软件包。 | npm CLI | [卡片](cards/npm-install.md) | [检索](retrieval/npm-install.md) | [原文](raw/npm/npm-install.md) |
+| `npm list` | 显示项目已安装依赖的树状关系。 | npm CLI | [卡片](cards/npm-list.md) | [检索](retrieval/npm-list.md) | [原文](raw/npm/npm-list.md) |
+| `npm outdated` | 检查项目依赖的已装、允许和最新版本。 | npm CLI | [卡片](cards/npm-outdated.md) | [检索](retrieval/npm-outdated.md) | [原文](raw/npm/npm-outdated.md) |
+| `npm run` | 列出或执行 package.json 中定义的项目脚本。 | npm CLI | [卡片](cards/npm-run.md) | [检索](retrieval/npm-run.md) | [原文](raw/npm/npm-run.md) |
 | `nslookup` | 按域名或 IP 查询 DNS 记录。 | BIND utils | [卡片](cards/nslookup.md) | [检索](retrieval/nslookup.md) | [原文](raw/linux-command/nslookup.md) |
 | `objdump` | 查看目标文件和可执行文件结构。 | binutils | [卡片](cards/objdump.md) | [检索](retrieval/objdump.md) | [原文](raw/linux-command/objdump.md) |
 | `parted` | 磁盘分区与调整分区大小的工具。 | parted | [卡片](cards/parted.md) | [检索](retrieval/parted.md) | [原文](raw/linux-command/parted.md) |
@@ -134,17 +216,25 @@
 | `pgrep` | 按名称或条件查找进程并输出 PID。 | procps-ng | [卡片](cards/pgrep.md) | [检索](retrieval/pgrep.md) | [原文](raw/linux-command/pgrep.md) |
 | `pidstat` | 按进程监控 CPU、内存与磁盘 IO。 | sysstat | [卡片](cards/pidstat.md) | [检索](retrieval/pidstat.md) | [原文](raw/linux-command/pidstat.md) |
 | `ping` | 用 ICMP 测试到目标主机的连通性。 | iputils | [卡片](cards/ping.md) | [检索](retrieval/ping.md) | [原文](raw/linux-command/ping.md) |
+| `pip` | 安装和管理指定 Python 环境中的软件包。 | pip（示例通过 Python 3 调用） | [卡片](cards/pip.md) | [检索](retrieval/pip.md) | [原文](raw/pip/pip.rst) |
+| `pip check` | 检查已安装包的依赖是否缺失或版本不兼容。 | pip（示例通过 Python 3 调用） | [卡片](cards/pip-check.md) | [检索](retrieval/pip-check.md) | [原文](raw/pip/pip-check.rst) |
+| `pip freeze` | 按 requirements 格式输出当前环境的软件包版本。 | pip（示例通过 Python 3 调用） | [卡片](cards/pip-freeze.md) | [检索](retrieval/pip-freeze.md) | [原文](raw/pip/pip-freeze.rst) |
+| `pip install` | 向 Python 环境安装软件包或项目依赖。 | pip（示例通过 Python 3 调用） | [卡片](cards/pip-install.md) | [检索](retrieval/pip-install.md) | [原文](raw/pip/pip-install.rst) |
+| `pip list` | 列出 Python 环境中已经安装的软件包。 | pip（示例通过 Python 3 调用） | [卡片](cards/pip-list.md) | [检索](retrieval/pip-list.md) | [原文](raw/pip/pip-list.rst) |
+| `pip show` | 显示已安装 Python 包的元数据和安装位置。 | pip（示例通过 Python 3 调用） | [卡片](cards/pip-show.md) | [检索](retrieval/pip-show.md) | [原文](raw/pip/pip-show.rst) |
 | `pkill` | 按进程名或匹配模式查找并发送信号。 | procps-ng | [卡片](cards/pkill.md) | [检索](retrieval/pkill.md) | [原文](raw/linux-command/pkill.md) |
 | `poweroff` | 关闭 Linux 系统并写入关机记录。 | systemd | [卡片](cards/poweroff.md) | [检索](retrieval/poweroff.md) | [原文](raw/linux-command/poweroff.md) |
 | `printf` | 按格式串格式化输出。 | Bash 内建 / GNU coreutils | [卡片](cards/printf.md) | [检索](retrieval/printf.md) | [原文](raw/linux-command/printf.md) |
 | `ps` | 显示进程的当前快照。 | procps-ng | [卡片](cards/ps.md) | [检索](retrieval/ps.md) | [原文](raw/linux-command/ps.md) |
 | `pstree` | 以树状图显示进程的父子派生关系。 | psmisc | [卡片](cards/pstree.md) | [检索](retrieval/pstree.md) | [原文](raw/linux-command/pstree.md) |
 | `pwd` | 显示当前工作目录的绝对路径。 | Bash / GNU coreutils | [卡片](cards/pwd.md) | [检索](retrieval/pwd.md) | [原文](raw/linux-command/pwd.md) |
+| `python3` | 运行 Python 3 程序、模块或交互解释器。 | Python 3 | [卡片](cards/python3.md) | [检索](retrieval/python3.md) | [原文](raw/python/python3.rst) |
 | `realpath` | 把相对路径和符号链接解析成绝对路径。 | GNU coreutils | [卡片](cards/realpath.md) | [检索](retrieval/realpath.md) | [原文](raw/linux-command/realpath.md) |
 | `reboot` | 重启系统，需 root 权限。 | systemd | [卡片](cards/reboot.md) | [检索](retrieval/reboot.md) | [原文](raw/linux-command/reboot.md) |
 | `rename` | 按字面串批量替换文件名。 | util-linux | [卡片](cards/rename.md) | [检索](retrieval/rename.md) | [原文](raw/linux-command/rename.md) |
 | `renice` | 调整运行中进程的调度优先级。 | util-linux | [卡片](cards/renice.md) | [检索](retrieval/renice.md) | [原文](raw/linux-command/renice.md) |
 | `rev` | 把每行内容按字符反序输出。 | util-linux | [卡片](cards/rev.md) | [检索](retrieval/rev.md) | [原文](raw/linux-command/rev.md) |
+| `rg` | 快速递归搜索文件内容，默认遵循忽略规则。 | ripgrep | [卡片](cards/rg.md) | [检索](retrieval/rg.md) | [原文](raw/ripgrep/rg.md) |
 | `rm` | 删除文件；指定递归选项后可删除目录。 | GNU coreutils | [卡片](cards/rm.md) | [检索](retrieval/rm.md) | [原文](raw/linux-command/rm.md) |
 | `rmdir` | 删除空目录。 | GNU coreutils | [卡片](cards/rmdir.md) | [检索](retrieval/rmdir.md) | [原文](raw/linux-command/rmdir.md) |
 | `rmmod` | 从内核中卸载已加载的模块。 | kmod | [卡片](cards/rmmod.md) | [检索](retrieval/rmmod.md) | [原文](raw/linux-command/rmmod.md) |
@@ -204,6 +294,11 @@
 | `userdel` | 删除用户账户及其家目录。 | shadow-utils | [卡片](cards/userdel.md) | [检索](retrieval/userdel.md) | [原文](raw/linux-command/userdel.md) |
 | `usermod` | 修改已有用户的属性和组。 | shadow-utils | [卡片](cards/usermod.md) | [检索](retrieval/usermod.md) | [原文](raw/linux-command/usermod.md) |
 | `users` | 打印当前登录本机的用户名列表。 | GNU coreutils | [卡片](cards/users.md) | [检索](retrieval/users.md) | [原文](raw/linux-command/users.md) |
+| `uv` | 管理 Python 项目、依赖、虚拟环境和工具。 | uv 项目工作流 | [卡片](cards/uv.md) | [检索](retrieval/uv.md) | [原文](raw/uv/uv.md) |
+| `uv add` | 向项目清单添加依赖并更新项目环境。 | uv 项目工作流 | [卡片](cards/uv-add.md) | [检索](retrieval/uv-add.md) | [原文](raw/uv/uv-add.md) |
+| `uv lock` | 解析项目依赖并创建或更新 uv.lock。 | uv 项目工作流 | [卡片](cards/uv-lock.md) | [检索](retrieval/uv-lock.md) | [原文](raw/uv/uv-lock.md) |
+| `uv run` | 在项目环境或指定环境中运行命令或 Python 脚本。 | uv 项目工作流 | [卡片](cards/uv-run.md) | [检索](retrieval/uv-run.md) | [原文](raw/uv/uv-run.md) |
+| `uv sync` | 将项目环境同步为锁文件和依赖组要求的状态。 | uv 项目工作流 | [卡片](cards/uv-sync.md) | [检索](retrieval/uv-sync.md) | [原文](raw/uv/uv-sync.md) |
 | `vmstat` | 报告进程、内存、IO 与 CPU 概况。 | procps-ng | [卡片](cards/vmstat.md) | [检索](retrieval/vmstat.md) | [原文](raw/linux-command/vmstat.md) |
 | `w` | 显示登录用户及其正在执行的命令。 | procps-ng | [卡片](cards/w.md) | [检索](retrieval/w.md) | [原文](raw/linux-command/w.md) |
 | `wait` | 等待后台进程或作业结束后返回。 | Bash 内建 | [卡片](cards/wait.md) | [检索](retrieval/wait.md) | [原文](raw/linux-command/wait.md) |

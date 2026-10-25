@@ -248,5 +248,152 @@
     "category": "absent",
     "query": "今天上海的天气预报是什么",
     "expected": []
+  },
+  {
+    "category": "tool-subcommand",
+    "query": "git status",
+    "expected": [
+      "git status"
+    ]
+  },
+  {
+    "category": "tool-subcommand",
+    "query": "git restore --staged",
+    "expected": [
+      "git restore"
+    ]
+  },
+  {
+    "category": "tool-subcommand",
+    "query": "docker run --rm",
+    "expected": [
+      "docker run"
+    ]
+  },
+  {
+    "category": "tool-subcommand",
+    "query": "docker compose up -d",
+    "expected": [
+      "docker compose up"
+    ]
+  },
+  {
+    "category": "tool-subcommand",
+    "query": "如何暂时保存 Git 的未提交修改",
+    "expected": [
+      "git stash"
+    ]
+  },
+  {
+    "category": "tool-subcommand",
+    "query": "列出已退出容器",
+    "expected": [
+      "docker ps"
+    ]
+  },
+  {
+    "category": "tool-subcommand",
+    "query": "容器内存占用",
+    "expected": [
+      "docker stats"
+    ]
+  },
+  {
+    "category": "tool-subcommand",
+    "query": "校验 Compose 配置",
+    "expected": [
+      "docker compose config"
+    ]
+  },
+  {
+    "category": "tool-subcommand",
+    "query": "进入 Compose 服务容器",
+    "expected": [
+      "docker compose exec"
+    ]
+  },
+  {
+    "category": "tool-subcommand",
+    "query": "Git 撤销已推送提交",
+    "expected": [
+      "git revert"
+    ]
+  },
+  {
+    "category": "tool-subcommand",
+    "query": "仅下载远程更新不合并",
+    "expected": [
+      "git fetch"
+    ]
+  },
+  {
+    "category": "tool-subcommand",
+    "query": "为镜像增加仓库标签",
+    "expected": [
+      "docker tag"
+    ]
+  },
+  {
+    "category": "software-tool",
+    "query": "格式化 JSON",
+    "expected": [
+      "jq"
+    ]
+  },
+  {
+    "category": "software-tool",
+    "query": "ripgrep 搜索代码",
+    "expected": [
+      "rg"
+    ]
+  },
+  {
+    "category": "software-tool",
+    "query": "创建 Python 虚拟环境",
+    "expected": [
+      "python3"
+    ]
+  },
+  {
+    "category": "software-tool",
+    "query": "查看 pip 包版本和依赖",
+    "expected": [
+      "pip show"
+    ]
+  },
+  {
+    "category": "software-tool",
+    "query": "CI 安装 npm 依赖",
+    "expected": [
+      "npm ci"
+    ]
+  },
+  {
+    "category": "software-tool",
+    "query": "uv locked 和 frozen 区别",
+    "expected": [
+      "uv sync"
+    ]
+  },
+  {
+    "category": "software-tool",
+    "query": "排查 Pod 重启前日志",
+    "expected": [
+      "kubectl logs"
+    ]
+  },
+  {
+    "category": "software-tool",
+    "query": "等待 K8s 部署完成",
+    "expected": [
+      "kubectl rollout status"
+    ]
+  },
+  {
+    "category": "software-tool",
+    "query": "本地渲染 Helm 模板",
+    "expected": [
+      "helm template"
+    ]
   }
 ]

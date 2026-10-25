@@ -208,9 +208,22 @@ class Index:
                 fused[command] += 1 / (60 + rank)
                 representatives.setdefault(command, i)
                 (lexical_best if channel == 0 else semantic_best)[command] = i
-        mentioned = set(re.findall(r"[a-zA-Z0-9_]+(?:[-+][a-zA-Z0-9_]+)*", query.lower()))
+        normalized_query = " ".join(query.lower().split())
+        mentioned = {
+            command
+            for command in self.cards
+            if re.search(
+                rf"(?<![a-z0-9_+\-]){re.escape(command.lower())}(?![a-z0-9_+\-])", normalized_query
+            )
+        }
+        # Prefer the explicitly named subcommand over its root overview card.
+        specific = {
+            command
+            for command in mentioned
+            if not any(other.startswith(command + " ") for other in mentioned)
+        }
         for command in fused:
-            if command.lower() in mentioned:
+            if command in specific:
                 fused[command] += 0.04
         results = []
         for command in sorted(fused, key=lambda c: (-fused[c], c))[:top_k]:
